@@ -32,3 +32,5 @@ if __name__ == '__main__':
     for i in Path(dic_path).iterdir():
         out_path = Path(ungz_dic, i.stem)
         ungz(i, out_path)
+
+    print('done')
