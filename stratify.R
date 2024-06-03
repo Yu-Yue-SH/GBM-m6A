@@ -119,6 +119,8 @@ stratify_m6a_levels_in_platforms <- function (
 
   # add to seurat object
   obj[['new_broad_type']] <- obj[['annotation_level_2']]
+  obj@meta.data[['new_broad_type']] <-
+    as.character(obj@meta.data[['new_broad_type']])
   obj[['new_broad_type']][obj[['annotation_level_1']] == 'Neoplastic'] <-
     'Cancer cell'
 
